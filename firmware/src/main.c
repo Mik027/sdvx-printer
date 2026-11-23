@@ -1,6 +1,6 @@
 // Copyright (C) 2026 Mik027.
 // SPDX-License-Identifier: GPL-3.0-only
-// USB printer gadget: Mitsubishi CPM50D (06d3:3b38) on a Pico 2 / Pico 2 W.
+// sdvx-printer: the cabinet sees a loaded Mitsubishi CPM50D (06d3:3b38).
 #include "pico/stdlib.h"
 #include "tusb.h"
 #include "device/usbd_pvt.h"

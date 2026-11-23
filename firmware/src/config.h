@@ -1,6 +1,6 @@
 // Copyright (C) 2026 Mik027.
 // SPDX-License-Identifier: GPL-3.0-only
-// Runtime settings for the CPM50D emulator. Rebuild after editing.
+// Runtime settings for sdvx-printer. Rebuild after editing.
 #ifndef EMU_CONFIG_H
 #define EMU_CONFIG_H
 

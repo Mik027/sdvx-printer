@@ -8,26 +8,26 @@ set(PICO_BOARD pico2 CACHE STRING "Board type")
 
 include(pico_sdk_import.cmake)
 
-project(cpm50d_emu C CXX ASM)
+project(sdvx_printer C CXX ASM)
 
 pico_sdk_init()
 
-add_executable(cpm50d_emu
+add_executable(sdvx_printer
     src/main.c
     src/protocol.c
     src/usb_descriptors.c
 )
 
-target_include_directories(cpm50d_emu PRIVATE ${CMAKE_CURRENT_LIST_DIR}/src)
+target_include_directories(sdvx_printer PRIVATE ${CMAKE_CURRENT_LIST_DIR}/src)
 
-target_link_libraries(cpm50d_emu
+target_link_libraries(sdvx_printer
     pico_stdlib
     tinyusb_device
     tinyusb_board
 )
 
 # USB is the printer. Do not claim it for stdio.
-pico_enable_stdio_usb(cpm50d_emu 0)
-pico_enable_stdio_uart(cpm50d_emu 0)
+pico_enable_stdio_usb(sdvx_printer 0)
+pico_enable_stdio_uart(sdvx_printer 0)
 
-pico_add_extra_outputs(cpm50d_emu)
+pico_add_extra_outputs(sdvx_printer)
